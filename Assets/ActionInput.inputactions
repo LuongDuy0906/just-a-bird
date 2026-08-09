@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "ActionInput",
+    "maps": [
+        {
+            "name": "GameAction",
+            "id": "13cbb11b-2e51-43e3-9fb6-21c369724b7d",
+            "actions": [
+                {
+                    "name": "Up",
+                    "type": "Button",
+                    "id": "8ece1fa0-1cfa-4bca-830f-b429979624db",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Down",
+                    "type": "Button",
+                    "id": "c55efeab-cbea-4623-9706-83487e16c9e8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fddb6257-bd37-464f-bc99-2b961aee7893",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "542ba0e7-0c00-4005-9538-85948af6fa0b",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
