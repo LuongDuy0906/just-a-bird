@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 164807558893452057}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.43, y: -10.19, z: 0}
+  m_LocalPosition: {x: 2.43, y: -23.1773, z: 0}
   m_LocalScale: {x: 1.5, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 5, y: 4}
+  m_Size: {x: 5, y: 12.658177}
   m_AdaptiveModeThreshold: 1
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -126,17 +126,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00002527237, y: -0.47156954}
+  m_Offset: {x: -0.00002527237, y: -0.3405192}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.08, y: 0.10142857}
-    newSize: {x: 5, y: 4}
+    newSize: {x: 5, y: 12.658177}
     adaptiveTilingThreshold: 1
     drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.678927, y: 4.2133408}
+  m_Size: {x: 3.678927, y: 11.631659}
   m_EdgeRadius: 0
 --- !u!1 &458901279856323135
 GameObject:
@@ -165,7 +165,7 @@ Transform:
   m_GameObject: {fileID: 458901279856323135}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 2.41, y: 11.99, z: 0}
+  m_LocalPosition: {x: 2.41, y: 23.8775, z: 0}
   m_LocalScale: {x: 1.5, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -225,7 +225,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 5, y: 4}
+  m_Size: {x: 5, y: 11.924991}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -264,17 +264,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.02306068, y: -0.4531029}
+  m_Offset: {x: 0.02306068, y: 0.10771561}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0.0014285714}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.08142857, y: 0.10142857}
-    newSize: {x: 5, y: 4}
+    newSize: {x: 5, y: 11.924991}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.8172405, y: 4.2454886}
+  m_Size: {x: 3.8172405, y: 11.352871}
   m_EdgeRadius: 0
 --- !u!1 &1895036166075785665
 GameObject:
@@ -325,6 +325,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleMovement
   speed: 20
+  verticalSpeed: 2
+  verticalAmplitude: 0.8
 --- !u!114 &1521577105010584037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,6 +341,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleTransform
   topPipe: {fileID: 458901279856323135}
   bottomPipe: {fileID: 164807558893452057}
+  topRetractedY: 24
+  topExtendedY: 16
+  botRetractedY: -24
+  botExtendedY: -16
 --- !u!1 &3666695920493919799
 GameObject:
   m_ObjectHideFlags: 0

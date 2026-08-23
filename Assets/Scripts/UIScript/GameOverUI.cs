@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameOverUI : MonoBehaviour
@@ -10,8 +11,15 @@ public class GameOverUI : MonoBehaviour
     [SerializeField] private Sprite bronzeMedalSprite;
     [SerializeField] private Sprite silverMedalSprite;
     [SerializeField] private Sprite goldMedalSprite;
-
+    [SerializeField] private Button gameOverButton;
+    [SerializeField] private Button homeButton;
     private const string BEST_SCORE_KEY = "BestScore";
+
+    private void Awake()
+    {
+        gameOverButton.onClick.AddListener(RestartGame);
+        homeButton.onClick.AddListener(GoToHome);
+    }
 
     public void ShowGameOver(int totalScore)
     {
@@ -49,5 +57,15 @@ public class GameOverUI : MonoBehaviour
             medalImage.gameObject.SetActive(true);
             medalImage.sprite = goldMedalSprite;
         }
+    }
+
+    private void RestartGame()
+    {
+        SceneLoader.LoadScene(SceneLoader.Scene.GameScene);
+    }
+
+    private void GoToHome()
+    {
+        SceneLoader.LoadScene(SceneLoader.Scene.MenuScene);
     }
 }

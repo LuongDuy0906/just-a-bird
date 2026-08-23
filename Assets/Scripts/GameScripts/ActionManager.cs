@@ -9,10 +9,39 @@ public class ActionManager : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         Instance = this;
-        inputActions = new ActionInput();
 
-        inputActions.Enable();
+        inputActions = new ActionInput();
+    }
+
+    private void OnEnable()
+    {
+        if(inputActions != null)
+        {
+            inputActions.GameAction.Enable();
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (inputActions != null)
+        {
+            inputActions.GameAction.Disable();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        // Dọn dẹp hoàn toàn khi đối tượng bị Destroy lúc load lại Scene
+        if (inputActions != null)
+        {
+            inputActions.Dispose();
+        }
     }
 
     public bool isUpActionPressed()
